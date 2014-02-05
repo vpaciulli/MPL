@@ -122,8 +122,8 @@
 		8F9F95FD18A2B9BA0015EA00 /* MPL */ = {
 			isa = PBXGroup;
 			children = (
-				8F9F960618A2B9BA0015EA00 /* DMVAppDelegate.h */,
 				11208D9618A2C0DE008E8721 /* tarefas.txt */,
+				8F9F960618A2B9BA0015EA00 /* DMVAppDelegate.h */,
 				8F9F960718A2B9BA0015EA00 /* DMVAppDelegate.m */,
 				8F9F960918A2B9BA0015EA00 /* Main.storyboard */,
 				8F9F960C18A2B9BA0015EA00 /* DMVViewController.h */,

@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface DMVViewController : UIViewController
+@interface DMVViewController : UIViewController <UITextFieldDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet MKMapView *worldmap;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+
+
 
 @end
