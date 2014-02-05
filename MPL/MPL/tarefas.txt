@@ -1,0 +1,31 @@
+
+Criar o melhor aplicativo possível até sexta-feira usando:
+
+- Core Location
+
+- MapKit
+
+- MKAnnotation
+
+- UIFont
+
+——————————————————————————————————
+
+Requisitos:
+
+1. Atualizar Localização (Vítor)
+2. Buscar Localização (Danilo)
+3. Traçar rota (Marcus)
+4. Marcar ponto no Mapa (Vítor)
+5. Mudar Fonte (Vítor)
+6. Mudar tipo do mapa (Vítor)
+7. Busca por Interesse (Danilo)
+8. Fala (Marcus)
+9. Adicionar Titulo ponto no Mapa (Danilo)
+10. Indicador de Atividade (Vítor)
+11. Endereço em cada Pin. (Danilo)
+12. Enviar Mensagem mostrar no Mapa com Formatação. (Danilo)
+13. ícone (Marcus)
+
+
+Nome: MTL - Map, Text & Location
