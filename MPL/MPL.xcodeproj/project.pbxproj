@@ -21,6 +21,8 @@
 		8F9F961918A2B9BA0015EA00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95FB18A2B9BA0015EA00 /* UIKit.framework */; };
 		8F9F962118A2B9BA0015EA00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F9F961F18A2B9BA0015EA00 /* InfoPlist.strings */; };
 		8F9F962318A2B9BA0015EA00 /* MPLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9F962218A2B9BA0015EA00 /* MPLTests.m */; };
+		8F9F962D18A2C00B0015EA00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F962C18A2C00B0015EA00 /* CoreLocation.framework */; };
+		8F9F962F18A2C0120015EA00 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F962E18A2C0120015EA00 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		8F9F961E18A2B9BA0015EA00 /* MPLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPLTests-Info.plist"; sourceTree = "<group>"; };
 		8F9F962018A2B9BA0015EA00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F9F962218A2B9BA0015EA00 /* MPLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPLTests.m; sourceTree = "<group>"; };
+		8F9F962C18A2C00B0015EA00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8F9F962E18A2C0120015EA00 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9F962F18A2C0120015EA00 /* MapKit.framework in Frameworks */,
+				8F9F962D18A2C00B0015EA00 /* CoreLocation.framework in Frameworks */,
 				8F9F95FA18A2B9BA0015EA00 /* CoreGraphics.framework in Frameworks */,
 				8F9F95FC18A2B9BA0015EA00 /* UIKit.framework in Frameworks */,
 				8F9F95F818A2B9BA0015EA00 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,8 @@
 		8F9F95F618A2B9BA0015EA00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F9F962E18A2C0120015EA00 /* MapKit.framework */,
+				8F9F962C18A2C00B0015EA00 /* CoreLocation.framework */,
 				8F9F95F718A2B9BA0015EA00 /* Foundation.framework */,
 				8F9F95F918A2B9BA0015EA00 /* CoreGraphics.framework */,
 				8F9F95FB18A2B9BA0015EA00 /* UIKit.framework */,
@@ -461,6 +469,7 @@
 				8F9F962818A2B9BA0015EA00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F9F962918A2B9BA0015EA00 /* Build configuration list for PBXNativeTarget "MPLTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +478,7 @@
 				8F9F962B18A2B9BA0015EA00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
