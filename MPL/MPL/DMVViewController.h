@@ -10,4 +10,6 @@
 
 @interface DMVViewController : UIViewController
 
+
+-(NSString*)data;
 @end

@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
     
+    
+    NSLog(@"%@",[self data]);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +28,17 @@
     [super didReceiveMemoryWarning];
     
 }
+
+-(NSString*)data{
+    
+    NSDate * now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"dd/MM/yy"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    
+    return newDateString;
+    
+}
+
 
 @end
