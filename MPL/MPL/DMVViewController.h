@@ -18,4 +18,6 @@
 
 
 
+
+-(NSString*)data;
 @end

@@ -41,8 +41,6 @@
     [locationManager stopUpdatingLocation];
     [indicator stopAnimating];
     [indicator setHidesWhenStopped:true];
-    
-    
 }
 
 
@@ -51,5 +49,17 @@
     [super didReceiveMemoryWarning];
     
 }
+
+-(NSString*)data{
+    
+    NSDate * now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"dd/MM/yy"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    
+    return newDateString;
+    
+}
+
 
 @end
