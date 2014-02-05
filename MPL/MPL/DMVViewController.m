@@ -60,6 +60,42 @@
     return newDateString;
     
 }
+//2. Buscar Localização (Danilo)
+-(void)findLocation:(UITextField *)textField
+{
+    [indicator startAnimating];
+    MKLocalSearchRequest *request =
+    [[MKLocalSearchRequest alloc] init];
+    
+    [request setNaturalLanguageQuery: [textField text]];
+    [request setRegion:[worldmap region]];
+    
+    
+    _matchingItems = [[NSMutableArray alloc] init];
+    
+    MKLocalSearch *search =
+    [[MKLocalSearch alloc]initWithRequest:request];
+    
+    [search startWithCompletionHandler:^(MKLocalSearchResponse
+                                         *response, NSError *error) {
+        if (response.mapItems.count == 0)
+            NSLog(@"No Matches");
+        else
+        {
+            //            MKMapItem *item = response.mapItems.firstObject;
+            item = response.mapItems.firstObject;
+            [_matchingItems addObject:item];
+            
+            MKPlacemark * plMark = [[MKPlacemark alloc] initWithPlacemark:item.placemark];
+            [worldmap addAnnotation:plMark];
+            [worldmap setCenterCoordinate: [plMark coordinate]];
+            NSLog(@"coordenada inicial: @", [[item placemark]coordinate]);
+            
+        }
+    }];
+    [indicator stopAnimating];
+}
+
 
 
 @end

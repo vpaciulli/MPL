@@ -20,4 +20,5 @@
 
 
 -(NSString*)data;
+-(void)findLocation:(UITextField *)textField;
 @end
