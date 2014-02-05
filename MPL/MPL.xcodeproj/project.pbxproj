@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11208D9718A2C0DE008E8721 /* tarefas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11208D9618A2C0DE008E8721 /* tarefas.txt */; };
 		8F9F95F818A2B9BA0015EA00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95F718A2B9BA0015EA00 /* Foundation.framework */; };
 		8F9F95FA18A2B9BA0015EA00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95F918A2B9BA0015EA00 /* CoreGraphics.framework */; };
 		8F9F95FC18A2B9BA0015EA00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95FB18A2B9BA0015EA00 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11208D9618A2C0DE008E8721 /* tarefas.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tarefas.txt; sourceTree = "<group>"; };
 		8F9F95F418A2B9BA0015EA00 /* MPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9F95F718A2B9BA0015EA00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F9F95F918A2B9BA0015EA00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8F9F960618A2B9BA0015EA00 /* DMVAppDelegate.h */,
+				11208D9618A2C0DE008E8721 /* tarefas.txt */,
 				8F9F960718A2B9BA0015EA00 /* DMVAppDelegate.m */,
 				8F9F960918A2B9BA0015EA00 /* Main.storyboard */,
 				8F9F960C18A2B9BA0015EA00 /* DMVViewController.h */,
@@ -240,6 +243,7 @@
 				8F9F961018A2B9BA0015EA00 /* Images.xcassets in Resources */,
 				8F9F960218A2B9BA0015EA00 /* InfoPlist.strings in Resources */,
 				8F9F960B18A2B9BA0015EA00 /* Main.storyboard in Resources */,
+				11208D9718A2C0DE008E8721 /* tarefas.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
