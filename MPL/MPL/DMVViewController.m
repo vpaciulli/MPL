@@ -38,8 +38,8 @@
         
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
         [annotation setTitle:@"Teste"];
-        [self.worldmap addAnnotation:annotation];
         [annotation setCoordinate:CLLocationCoordinate2DMake(250, 250)];
+        [self.worldmap addAnnotation:annotation];
         
     }
 }
