@@ -14,12 +14,11 @@
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
-
 - (IBAction)updateLocation:(id)sender;
 
 - (IBAction)mapType:(id)sender;
-
 -(NSString*)data;
 -(void)findLocation:(UITextField *)textField;
 @end
