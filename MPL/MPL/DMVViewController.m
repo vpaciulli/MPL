@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
 //  Inicia Toque longo.
+    _uiTabTexto.enabled = true;
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureHandle:)];
     longPressGesture.minimumPressDuration = 1;

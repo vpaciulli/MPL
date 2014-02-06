@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hJk-U4-udI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item-->
+        <!--View Controller - Map, Point & Location-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="DMVViewController" sceneMemberID="viewController">
@@ -90,12 +90,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gWi-r4-5YJ"/>
+                    <tabBarItem key="tabBarItem" title="Map, Point &amp; Location" id="4wR-7F-HYe"/>
                     <navigationItem key="navigationItem" id="Fdq-EL-ZLj"/>
                     <connections>
                         <outlet property="indicator" destination="Hiv-ke-hDk" id="QrW-xU-h07"/>
                         <outlet property="tfChegada" destination="A8t-Pu-uzK" id="EKv-Dw-ylj"/>
                         <outlet property="tfSaida" destination="u2D-45-SYs" id="9lF-jj-jWa"/>
+                        <outlet property="uiTabTexto" destination="4wR-7F-HYe" id="f71-xy-ntP"/>
                         <outlet property="worldmap" destination="lFL-K4-spn" id="oiO-E1-8Vb"/>
                     </connections>
                 </viewController>
@@ -107,25 +108,25 @@
         <scene sceneID="b3G-y5-w7f">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="hJk-U4-udI" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jll-bO-9fG">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wM0-wt-Mm3" kind="relationship" relationship="viewControllers" id="n8r-KJ-OtS"/>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="ixr-K3-YnC"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="AoG-DU-ewB"/>
+                        <segue destination="wM0-wt-Mm3" kind="relationship" relationship="viewControllers" id="Q1G-MD-J2B"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buR-y0-sUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-272" y="251"/>
         </scene>
-        <!--View Controller - Item 2-->
+        <!--View Controller - Edição de Texto-->
         <scene sceneID="nXM-ha-p6b">
             <objects>
-                <viewController id="wM0-wt-Mm3" sceneMemberID="viewController">
+                <viewController title="Edição de Texto" id="wM0-wt-Mm3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uyP-Sg-6Wu"/>
                         <viewControllerLayoutGuide type="bottom" id="lzY-8Z-hOb"/>

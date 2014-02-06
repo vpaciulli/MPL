@@ -24,6 +24,8 @@
 
 - (IBAction)updateLocation:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITabBarItem *uiTabTexto;
+
 
 - (IBAction)mapType:(id)sender;
 -(NSString*)data;
