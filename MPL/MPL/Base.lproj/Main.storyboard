@@ -38,7 +38,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnE-3E-1d8">
-                                <rect key="frame" x="88" y="430" width="145" height="30"/>
+                                <rect key="frame" x="11" y="434" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Atualizar Localização">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -48,10 +48,16 @@
                                     <action selector="updateLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="W7g-bT-Uwc"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-ke-hDk">
+                                <rect key="frame" x="278" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="Hiv-ke-hDk" id="QrW-xU-h07"/>
                         <outlet property="worldmap" destination="lFL-K4-spn" id="oiO-E1-8Vb"/>
                     </connections>
                 </viewController>

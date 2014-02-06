@@ -8,6 +8,7 @@
 
 #import "DMVViewController.h"
 #import <MapKit/MapKit.h>
+#pragma mark
 
 @implementation DMVViewController
 @synthesize worldmap;
@@ -18,11 +19,29 @@
 {
     [super viewDidLoad];
     
+//  Inicia Toque longo.
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureHandle:)];
+    longPressGesture.minimumPressDuration = 1;
+    [[self worldmap]addGestureRecognizer:longPressGesture];
+    
+//    Traz mapa \/
     locationManager = [[CLLocationManager alloc]init];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager setDelegate:self];
     [locationManager startUpdatingLocation];
-    
+    [indicator setHidesWhenStopped:true];
+}
+
+-(void) longPressGestureHandle:(UILongPressGestureRecognizer*)sender{
+    if(sender.state==UIGestureRecognizerStateEnded){
+        
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
+        [annotation setTitle:@"Teste"];
+        [self.worldmap addAnnotation:annotation];
+        [annotation setCoordinate:CLLocationCoordinate2DMake(250, 250)];
+        
+    }
 }
 
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
@@ -34,8 +53,7 @@
     [worldmap setRegion:region animated: YES];
     [worldmap setShowsUserLocation:YES];
     [locationManager stopUpdatingLocation];
-//    [indicator stopAnimating];
-//    [indicator setHidesWhenStopped:true];
+    [indicator stopAnimating];
 }
 
 

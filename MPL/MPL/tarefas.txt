@@ -22,10 +22,10 @@ Requisitos:
 7. Busca por Interesse (Danilo)
 8. Fala (Marcus)
 9. Adicionar Titulo ponto no Mapa (Danilo)
-10. Indicador de Atividade (Vítor)
+10. Indicador de Atividade (Vítor) OK Chamar como: [indicator startAnimating]; e [indicator stopAnimating];
 11. Endereço em cada Pin. (Danilo)
 12. Enviar Mensagem mostrar no Mapa com Formatação. (Danilo)
 13. ícone (Marcus)
 
 
-Nome: MTL - Map, Text & Location
+Nome: MPL - Map, Point & Location
