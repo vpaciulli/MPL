@@ -82,8 +82,8 @@
             NSLog(@"No Matches");
         else
         {
-            //            MKMapItem *item = response.mapItems.firstObject;
-            item = response.mapItems.firstObject;
+            MKMapItem *item = response.mapItems.firstObject;
+//            item = response.mapItems.firstObject;
             [_matchingItems addObject:item];
             
             MKPlacemark * plMark = [[MKPlacemark alloc] initWithPlacemark:item.placemark];
