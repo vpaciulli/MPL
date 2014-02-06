@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
 - (IBAction)updateLocation:(id)sender;
 
+- (IBAction)mapType:(id)sender;
 -(NSString*)data;
 -(void)findLocation:(UITextField *)textField;
 @end

@@ -9,7 +9,6 @@
 #import "DMVViewController.h"
 #import <MapKit/MapKit.h>
 
-
 @implementation DMVViewController
 @synthesize worldmap;
 @synthesize locationManager;
@@ -48,6 +47,20 @@
 
 - (IBAction)updateLocation:(id)sender {
     [locationManager startUpdatingLocation];
+}
+
+- (IBAction)mapType:(id)sender {
+    UISegmentedControl *seg = (UISegmentedControl *)sender;
+    if (seg.selectedSegmentIndex==0) {
+        [worldmap setMapType:MKMapTypeStandard];
+    
+    }else if (seg.selectedSegmentIndex==1){
+        [worldmap setMapType:MKMapTypeHybrid];
+    
+    }else if (seg.selectedSegmentIndex==2){
+        [worldmap setMapType:MKMapTypeSatellite];
+    }
+    
 }
 
 -(NSString*)data{
