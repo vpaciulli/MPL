@@ -95,11 +95,31 @@
                         <outlet property="tfChegada" destination="A8t-Pu-uzK" id="P47-dA-vQN"/>
                         <outlet property="tfDestino" destination="u2D-45-SYs" id="mSU-7E-kN1"/>
                         <outlet property="worldmap" destination="lFL-K4-spn" id="oiO-E1-8Vb"/>
+                        <segue destination="HkH-C7-2Gz" kind="push" id="fh7-Et-j8N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="221"/>
+            <point key="canvasLocation" x="-333" y="205"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pL6-Bl-tSj">
+            <objects>
+                <viewController id="HkH-C7-2Gz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1K-cE-CQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="rUS-NO-MOi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bgS-Nl-dsC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5JV-pS-tRd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrs-5N-zq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="210"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
