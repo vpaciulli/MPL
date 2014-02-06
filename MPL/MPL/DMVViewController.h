@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
-
 @property (weak, nonatomic) IBOutlet UITextField *tfSaida;
 @property (weak, nonatomic) IBOutlet UITextField *tfChegada;
 

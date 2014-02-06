@@ -92,8 +92,8 @@
                     </view>
                     <connections>
                         <outlet property="indicator" destination="Hiv-ke-hDk" id="QrW-xU-h07"/>
-                        <outlet property="tfChegada" destination="A8t-Pu-uzK" id="P47-dA-vQN"/>
-                        <outlet property="tfDestino" destination="u2D-45-SYs" id="mSU-7E-kN1"/>
+                        <outlet property="tfChegada" destination="A8t-Pu-uzK" id="EKv-Dw-ylj"/>
+                        <outlet property="tfSaida" destination="u2D-45-SYs" id="9lF-jj-jWa"/>
                         <outlet property="worldmap" destination="lFL-K4-spn" id="oiO-E1-8Vb"/>
                         <segue destination="HkH-C7-2Gz" kind="push" id="fh7-Et-j8N"/>
                     </connections>

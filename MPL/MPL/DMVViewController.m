@@ -100,7 +100,7 @@
     
 }
 
-//2. Buscar Localização (Danilo)
+////2. Buscar Localização (Danilo)
 -(void)findLocation:(UITextField *)textField
 {
     [indicator startAnimating];
@@ -135,7 +135,5 @@
     }];
     [indicator stopAnimating];
 }
-
-
 
 @end
