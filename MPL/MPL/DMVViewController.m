@@ -39,8 +39,8 @@
     [worldmap setRegion:region animated: YES];
     [worldmap setShowsUserLocation:YES];
     [locationManager stopUpdatingLocation];
-    [indicator stopAnimating];
-    [indicator setHidesWhenStopped:true];
+//    [indicator stopAnimating];
+//    [indicator setHidesWhenStopped:true];
 }
 
 
@@ -48,6 +48,10 @@
 {
     [super didReceiveMemoryWarning];
     
+}
+
+- (IBAction)updateLocation:(id)sender {
+    [locationManager startUpdatingLocation];
 }
 
 -(NSString*)data{
