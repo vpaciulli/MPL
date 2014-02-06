@@ -10,10 +10,6 @@
 #import <MapKit/MapKit.h>
 
 
-@interface DMVViewController ()
-
-@end
-
 @implementation DMVViewController
 @synthesize worldmap;
 @synthesize locationManager;
@@ -39,8 +35,8 @@
     [worldmap setRegion:region animated: YES];
     [worldmap setShowsUserLocation:YES];
     [locationManager stopUpdatingLocation];
-    [indicator stopAnimating];
-    [indicator setHidesWhenStopped:true];
+//    [indicator stopAnimating];
+//    [indicator setHidesWhenStopped:true];
 }
 
 
@@ -48,6 +44,10 @@
 {
     [super didReceiveMemoryWarning];
     
+}
+
+- (IBAction)updateLocation:(id)sender {
+    [locationManager startUpdatingLocation];
 }
 
 -(NSString*)data{
@@ -60,6 +60,7 @@
     return newDateString;
     
 }
+
 //2. Buscar Localização (Danilo)
 -(void)findLocation:(UITextField *)textField
 {

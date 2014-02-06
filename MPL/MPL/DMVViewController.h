@@ -13,11 +13,10 @@
 @interface DMVViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (weak, nonatomic) IBOutlet MKMapView *worldmap;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (strong, nonatomic) NSMutableArray *matchingItems;
-
-
+@property (weak, nonatomic) IBOutlet MKMapView *worldmap;
+- (IBAction)updateLocation:(id)sender;
 
 -(NSString*)data;
 -(void)findLocation:(UITextField *)textField;
