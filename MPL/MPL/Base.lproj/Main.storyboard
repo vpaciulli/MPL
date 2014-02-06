@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hJk-U4-udI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3017" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Map, Point & Location-->
+        <!--View Controller - Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="DMVViewController" sceneMemberID="viewController">
@@ -54,20 +54,48 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="De:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2D-45-SYs">
+                                <rect key="frame" x="11" y="56" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Para:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8t-Pu-uzK">
+                                <rect key="frame" x="11" y="87" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwk-K1-y8h">
+                                <rect key="frame" x="278" y="56" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="🔎">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btmSaida:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iF9-6w-y1W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sM-Aw-BZl">
+                                <rect key="frame" x="278" y="87" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="🔎">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btmChegada:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vRJ-nj-YYI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map, Point &amp; Location" id="4wR-7F-HYe"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="gWi-r4-5YJ"/>
                     <navigationItem key="navigationItem" id="Fdq-EL-ZLj"/>
                     <connections>
                         <outlet property="indicator" destination="Hiv-ke-hDk" id="QrW-xU-h07"/>
-<<<<<<< HEAD
                         <outlet property="tfChegada" destination="A8t-Pu-uzK" id="EKv-Dw-ylj"/>
                         <outlet property="tfSaida" destination="u2D-45-SYs" id="9lF-jj-jWa"/>
-                        <outlet property="uiTabTexto" destination="4wR-7F-HYe" id="f71-xy-ntP"/>
-=======
->>>>>>> 2a63d9c58de10953cf841e107474c8ca0d75af1f
                         <outlet property="worldmap" destination="lFL-K4-spn" id="oiO-E1-8Vb"/>
                     </connections>
                 </viewController>
@@ -79,25 +107,25 @@
         <scene sceneID="b3G-y5-w7f">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="hJk-U4-udI" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jll-bO-9fG">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="AoG-DU-ewB"/>
-                        <segue destination="wM0-wt-Mm3" kind="relationship" relationship="viewControllers" id="Q1G-MD-J2B"/>
+                        <segue destination="wM0-wt-Mm3" kind="relationship" relationship="viewControllers" id="n8r-KJ-OtS"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="ixr-K3-YnC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buR-y0-sUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-272" y="251"/>
         </scene>
-        <!--View Controller - Edição de Texto-->
+        <!--View Controller - Item 2-->
         <scene sceneID="nXM-ha-p6b">
             <objects>
-                <viewController title="Edição de Texto" id="wM0-wt-Mm3" sceneMemberID="viewController">
+                <viewController id="wM0-wt-Mm3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uyP-Sg-6Wu"/>
                         <viewControllerLayoutGuide type="bottom" id="lzY-8Z-hOb"/>
