@@ -17,7 +17,14 @@
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
 
+@property (weak, nonatomic) IBOutlet UITextField *tfSaida;
+@property (weak, nonatomic) IBOutlet UITextField *tfChegada;
+
+- (IBAction)btmSaida:(id)sender;
+- (IBAction)btmChegada:(id)sender;
+
 - (IBAction)updateLocation:(id)sender;
+
 
 - (IBAction)mapType:(id)sender;
 -(NSString*)data;

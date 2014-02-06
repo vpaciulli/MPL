@@ -63,6 +63,14 @@
     
 }
 
+- (IBAction)btmSaida:(id)sender {
+    [self findLocation:_tfSaida];
+}
+
+- (IBAction)btmChegada:(id)sender {
+    [self findLocation:_tfChegada];
+}
+
 - (IBAction)updateLocation:(id)sender {
     [locationManager startUpdatingLocation];
 }
@@ -121,7 +129,7 @@
             MKPlacemark * plMark = [[MKPlacemark alloc] initWithPlacemark:item.placemark];
             [worldmap addAnnotation:plMark];
             [worldmap setCenterCoordinate: [plMark coordinate]];
-            NSLog(@"coordenada inicial: @", [[item placemark]coordinate]);
+//            NSLog(@"coordenada inicial: @", [[item placemark]coordinate]);
             
         }
     }];
