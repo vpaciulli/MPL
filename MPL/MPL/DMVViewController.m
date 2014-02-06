@@ -57,19 +57,15 @@
     [indicator stopAnimating];
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     
-}
-
-- (IBAction)btmSaida:(id)sender {
-    [self findLocation:_tfSaida];
-}
-
-- (IBAction)btmChegada:(id)sender {
-    [self findLocation:_tfChegada];
 }
 
 - (IBAction)updateLocation:(id)sender {
