@@ -13,12 +13,12 @@ Criar o melhor aplicativo possível até sexta-feira usando:
 
 Requisitos:
 
-1. Atualizar Localização (Vítor)
-2. Buscar Localização (Danilo)
+1. Atualizar Localização (Vítor) OK
+2. Buscar Localização (Danilo) OK
 3. Traçar rota (Marcus)
 4. Marcar ponto no Mapa (Vítor)
 5. Mudar Fonte (Vítor)
-6. Mudar tipo do mapa (Vítor)
+6. Mudar tipo do mapa (Vítor) OK
 7. Busca por Interesse (Danilo)
 8. Fala (Marcus)
 9. Adicionar Titulo ponto no Mapa (Danilo)
