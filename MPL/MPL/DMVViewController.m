@@ -10,11 +10,6 @@
 #import <MapKit/MapKit.h>
 #pragma mark
 
-@interface DMVViewController ()
-
-@end
-
-
 @implementation DMVViewController
 @synthesize worldmap;
 @synthesize locationManager;
@@ -25,7 +20,6 @@
 @synthesize segcontrol; //
 @synthesize desenhaRota; //
 @synthesize ListadePontos; //
-
 
 
 - (void)viewDidLoad

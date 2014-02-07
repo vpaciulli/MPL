@@ -13,7 +13,6 @@
 @interface DMVTableVController : UIViewController <UITextFieldDelegate>{
     
 }
-
-@property (weak, nonatomic) IBOutlet UITableView *uiTableView;
+@property (strong, nonatomic) IBOutlet UITableView *uiTbView;
 
 @end
