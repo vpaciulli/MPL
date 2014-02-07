@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="-152" y="-25"/>
         </scene>
-        <!--Table View Controller - Item-->
+        <!--Table View Controller - Favoritos-->
         <scene sceneID="Whx-2y-SYw">
             <objects>
                 <tableViewController id="hCV-Eu-qTO" sceneMemberID="viewController">
@@ -121,7 +121,7 @@
                             <outlet property="delegate" destination="hCV-Eu-qTO" id="TYV-71-ehq"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="1bl-1l-6g0"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="1bl-1l-6g0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rx8-oE-3nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

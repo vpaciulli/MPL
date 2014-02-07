@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11208D9718A2C0DE008E8721 /* tarefas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11208D9618A2C0DE008E8721 /* tarefas.txt */; };
+		11F9841918A53D6300BC743B /* DMVTableVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F9841818A53D6300BC743B /* DMVTableVController.m */; };
 		8F9F95F818A2B9BA0015EA00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95F718A2B9BA0015EA00 /* Foundation.framework */; };
 		8F9F95FA18A2B9BA0015EA00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95F918A2B9BA0015EA00 /* CoreGraphics.framework */; };
 		8F9F95FC18A2B9BA0015EA00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F95FB18A2B9BA0015EA00 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		11208D9618A2C0DE008E8721 /* tarefas.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tarefas.txt; sourceTree = "<group>"; };
+		11F9841718A53D6300BC743B /* DMVTableVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMVTableVController.h; sourceTree = "<group>"; };
+		11F9841818A53D6300BC743B /* DMVTableVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMVTableVController.m; sourceTree = "<group>"; };
 		8F9F95F418A2B9BA0015EA00 /* MPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9F95F718A2B9BA0015EA00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F9F95F918A2B9BA0015EA00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 		8F9F95FD18A2B9BA0015EA00 /* MPL */ = {
 			isa = PBXGroup;
 			children = (
+				11F9841718A53D6300BC743B /* DMVTableVController.h */,
+				11F9841818A53D6300BC743B /* DMVTableVController.m */,
 				11208D9618A2C0DE008E8721 /* tarefas.txt */,
 				8F9F960618A2B9BA0015EA00 /* DMVAppDelegate.h */,
 				8F9F960718A2B9BA0015EA00 /* DMVAppDelegate.m */,
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F9841918A53D6300BC743B /* DMVTableVController.m in Sources */,
 				8F9F960818A2B9BA0015EA00 /* DMVAppDelegate.m in Sources */,
 				8F9F960418A2B9BA0015EA00 /* main.m in Sources */,
 				8F9F960E18A2B9BA0015EA00 /* DMVViewController.m in Sources */,
