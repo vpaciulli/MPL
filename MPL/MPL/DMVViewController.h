@@ -9,18 +9,31 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface DMVViewController : UIViewController <UITextFieldDelegate>
+
+{
+    CLLocationCoordinate2D  coordinates[2]; //
+    NSMutableArray * ListadePontos;  //
+    NSMutableArray * ListadeFalas;
+    AVSpeechSynthesizer * fala;
+    AVSpeechUtterance * falau;
+}
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
-@property (weak, nonatomic) IBOutlet UITextField *tfSaida;
-@property (weak, nonatomic) IBOutlet UITextField *tfChegada;
 
-- (IBAction)btmSaida:(id)sender;
-- (IBAction)btmChegada:(id)sender;
+
+@property (nonatomic,retain) MKPolyline *routeline; //
+@property (nonatomic,retain) MKPolylineView *routeLineView; //
+@property (weak, nonatomic) IBOutlet UITextField *textField; //
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segcontrol; //
+@property (weak, nonatomic) IBOutlet UIButton *desenhaRota; //
+@property (nonatomic,strong) NSMutableArray *ListadePontos; //
 
 - (IBAction)updateLocation:(id)sender;
 

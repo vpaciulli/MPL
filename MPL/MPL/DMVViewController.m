@@ -14,16 +14,24 @@
 @synthesize worldmap;
 @synthesize locationManager;
 @synthesize indicator;
+@synthesize routeline; //
+@synthesize routeLineView; //
+@synthesize textField; //
+@synthesize segcontrol; //
+@synthesize desenhaRota; //
+@synthesize ListadePontos; //
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
 //  Inicia Toque longo.
+
     
-    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureHandle:)];
-    longPressGesture.minimumPressDuration = 1;
-    [[self worldmap]addGestureRecognizer:longPressGesture];
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
+    lpgr.minimumPressDuration = 1; //user must press for 2 seconds
+    [worldmap addGestureRecognizer:lpgr];
     
 //    Traz mapa \/
     locationManager = [[CLLocationManager alloc]init];
@@ -33,15 +41,19 @@
     [indicator setHidesWhenStopped:true];
 }
 
--(void) longPressGestureHandle:(UILongPressGestureRecognizer*)sender{
-    if(sender.state==UIGestureRecognizerStateEnded){
-        
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
-        [annotation setTitle:@"Teste"];
-        [self.worldmap addAnnotation:annotation];
-        [annotation setCoordinate:CLLocationCoordinate2DMake(250, 250)];
-        
-    }
+- (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded)
+    return;
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:worldmap];
+    CLLocationCoordinate2D touchMapCoordinate =
+    [worldmap convertPoint:touchPoint toCoordinateFromView:worldmap];
+    
+    MKPointAnnotation *pa = [[MKPointAnnotation alloc] init];
+    pa.coordinate = touchMapCoordinate;
+    [worldmap addAnnotation:pa];
+
 }
 
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
@@ -63,13 +75,9 @@
     
 }
 
-//- (IBAction)btmSaida:(id)sender {
-//    [self findLocation:_tfSaida];
-//}
-
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
-    [self findLocation:_tfSaida];
+    [self realizabusca];
     return YES;
 }
 
@@ -102,40 +110,133 @@
     
 }
 
-////2. Buscar Localização (Danilo)
--(void)findLocation:(UITextField *)textField
-{
+-(void) realizabusca {
+    
     [indicator startAnimating];
-    MKLocalSearchRequest *request =
-    [[MKLocalSearchRequest alloc] init];
+    //remove os pins do mapa
+    ListadePontos = [[NSMutableArray  alloc] init];
     
-    [request setNaturalLanguageQuery: [textField text]];
-    [request setRegion:[worldmap region]];
+    if ( ![ListadePontos isEqualToArray:nil]) {
+        [worldmap removeAnnotations:worldmap.annotations];
+        
+        [ListadePontos removeAllObjects];
+    }
     
     
-    _matchingItems = [[NSMutableArray alloc] init];
+    //Cria a busca responsável pelos pins no mapa.
     
+    
+    MKLocalSearchRequest * request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = [textField text];
+    request.region = worldmap.region;
+    //faz a busca e armazena resultados em uma mutableArray
     MKLocalSearch *search =
     [[MKLocalSearch alloc]initWithRequest:request];
-    
     [search startWithCompletionHandler:^(MKLocalSearchResponse
                                          *response, NSError *error) {
+        
         if (response.mapItems.count == 0)
             NSLog(@"No Matches");
         else
+            for (MKMapItem *item in response.mapItems)
+            {
+                MKPointAnnotation *point = [[MKPointAnnotation alloc]init];
+                //guarda os itens no mutable array
+                CLPlacemark *placemark = item.placemark;
+                CLLocation *location = placemark.location;
+                CLLocationCoordinate2D loc3 = location.coordinate;
+                NSLog(@"%f",location.coordinate.latitude);
+                NSLog(@"%f",location.coordinate.longitude);
+                [ point setCoordinate:loc3];
+                NSLog(@"%f",point.coordinate.latitude);
+                NSLog(@"%f",point.coordinate.longitude);
+                point.title=item.name;
+                [ListadePontos addObject:point];
+                NSLog(@"%f", [[ListadePontos objectAtIndex:0 ] coordinate] ) ;
+                [worldmap addAnnotation:point];
+                [worldmap setCenterCoordinate: [point coordinate]];
+                
+            }
+        
+        [indicator stopAnimating];
+    }];
+    
+}
+
+
+- (IBAction)desenhaRota:(id)sender {
+    if (ListadePontos.count != 0) {
+        
+    }
+    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+    srand(time (NULL));
+    int  num = rand() % ListadePontos.count;
+    MKPlacemark * place = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate addressDictionary:nil];
+    MKPlacemark * place1 = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:num]).coordinate addressDictionary:nil];
+    // NSLog(@"%@",((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate);
+    //place.coordinate = ((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate;
+    //place1.coordinate = ((MKPointAnnotation *)[ListadePontos objectAtIndex:1]).coordinate;
+    //request.source  = [[MKMapItem alloc]initWithPlacemark:place];
+    
+    request.source = [MKMapItem mapItemForCurrentLocation];
+    request.destination = [[MKMapItem alloc] initWithPlacemark:place1];
+    request.requestsAlternateRoutes = NO;
+    MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
+    [directions calculateDirectionsWithCompletionHandler:
+     ^(MKDirectionsResponse *response, NSError *error) {
+         if (error) {
+             NSLog(@"ERRO MENOR");
+         } else {
+             [self showRoute:response];
+         }
+     }];
+}
+
+
+- (void)showRoute:(MKDirectionsResponse *)response
+{
+    [ListadeFalas removeAllObjects];
+    for (MKRoute *route in response.routes)
+    {
+        [worldmap addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+        
+        for (MKRouteStep *step in route.steps)
         {
-            MKMapItem *item = response.mapItems.firstObject;
-//            item = response.mapItems.firstObject;
-            [_matchingItems addObject:item];
             
-            MKPlacemark * plMark = [[MKPlacemark alloc] initWithPlacemark:item.placemark];
-            [worldmap addAnnotation:plMark];
-            [worldmap setCenterCoordinate: [plMark coordinate]];
-//            NSLog(@"coordenada inicial: @", [[item placemark]coordinate]);
+            // NSLog(@"%@", step.instructions);
+            [ListadeFalas addObject:(NSString *)step.instructions.stringByStandardizingPath];
+            [self Speak:step.instructions];
             
         }
-    }];
-    [indicator stopAnimating];
+    }
+    
 }
+
+-(void) Speak :(NSString *) text
+{
+    fala =[[ AVSpeechSynthesizer alloc] init];
+    falau = [[AVSpeechUtterance alloc] init];
+    falau = [AVSpeechUtterance speechUtteranceWithString:text];
+    [falau setRate:0.1f];
+    //[falau setVoice:<#(AVSpeechSynthesisVoice *)#>]
+    //falau.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"pt-PT"];
+    [fala speakUtterance:falau];
+}
+
+
+
+-(MKOverlayRenderer *) mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    if([overlay isKindOfClass:[MKPolyline class]]) {
+        MKPolyline *route = overlay;
+        MKPolylineRenderer *routeRenderer =[[MKPolylineRenderer alloc] initWithPolyline:route];
+        routeRenderer.strokeColor = [UIColor greenColor];
+        routeRenderer.lineWidth = 2;
+        routeRenderer.fillColor = [UIColor greenColor];
+        return routeRenderer;
+    }
+    else return nil;
+}
+
 
 @end
