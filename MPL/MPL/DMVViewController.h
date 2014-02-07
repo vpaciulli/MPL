@@ -17,7 +17,6 @@
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
 
-
 - (IBAction)updateLocation:(id)sender;
 
 

@@ -15,12 +15,12 @@ Requisitos:
 
 1. Atualizar Localização (Vítor) OK
 2. Buscar Localização (Danilo) OK
-3. Traçar rota (Marcus)
+3. Traçar rota (Marcus) OK
 4. Marcar ponto no Mapa (Vítor)
 5. Mudar Fonte (Vítor)
 6. Mudar tipo do mapa (Vítor) OK
-7. Busca por Interesse (Danilo)
-8. Fala (Marcus)
+7. Busca por Interesse (Danilo) OK
+8. Fala (Marcus) OK
 9. Adicionar Titulo ponto no Mapa (Danilo)
 10. Indicador de Atividade (Vítor) OK Chamar como: [indicator startAnimating]; e [indicator stopAnimating];
 11. Endereço em cada Pin. (Danilo)
