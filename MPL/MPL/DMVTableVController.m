@@ -10,26 +10,52 @@
 #import <MapKit/MapKit.h>
 #pragma mark
 
-@interface DMVTableVController ()
-
-@end
-
 @implementation DMVTableVController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+//  Inicia Toque longo.
+//    Traz mapa \/
+}
 
-    NSArray * arr = [[NSArray alloc]initWithObjects:@"Danilo", @"Lima", nil];
-    
-    [_uiTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
+-(void) longPressGestureHandle:(UILongPressGestureRecognizer*)sender{
+    if(sender.state==UIGestureRecognizerStateEnded){
+        
+    }
+}
+
+-(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+
 }
 
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+//    [super didReceiveMemoryWarning];
+    
+}
+
+//- (IBAction)btmSaida:(id)sender {
+//    [self findLocation:_tfSaida];
+//}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return true;
+}
+
+
+-(NSString*)data{
+    
+    NSDate * now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"dd/MM/yy"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    
+    return newDateString;
     
 }
 
