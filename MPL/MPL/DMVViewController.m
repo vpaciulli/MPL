@@ -63,12 +63,14 @@
     
 }
 
-- (IBAction)btmSaida:(id)sender {
-    [self findLocation:_tfSaida];
-}
+//- (IBAction)btmSaida:(id)sender {
+//    [self findLocation:_tfSaida];
+//}
 
-- (IBAction)btmChegada:(id)sender {
-    [self findLocation:_tfChegada];
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    [self findLocation:_tfSaida];
+    return YES;
 }
 
 - (IBAction)updateLocation:(id)sender {
