@@ -40,11 +40,31 @@
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
 }
+//pega cellula selecionada e chama metodo de entrada de texto;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    NSString *cellText = cell.textLabel.text;
+//    NSLog(cellText);
+    
+    UIAlertView * inputBox = [[UIAlertView alloc] initWithTitle:@"Favorito" message:@"Deigite seu local favorito!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    inputBox.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [inputBox show];
+    
+    NSString * texto = inputBox.textInputContextIdentifier;
+
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    NSLog(@"Digitou: %@",[[alertView textFieldAtIndex:0] text]);
+//    NSLog(@"Digitou: %@",[[alertView textFieldAtIndex:0] text]);
+
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     
 }
+
 
 @end
