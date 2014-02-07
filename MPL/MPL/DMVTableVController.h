@@ -10,6 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface DMVTableVController : UIViewController <UITextFieldDelegate>
+@interface DMVTableVController : UIViewController <UITextFieldDelegate>{
+    
+}
+@property (strong, nonatomic) IBOutlet UITableView *uiTbView;
 
 @end

@@ -16,8 +16,8 @@
 {
     [super viewDidLoad];
     
-//  Inicia Toque longo.
     
+//  Inicia Toque longo.
 //    Traz mapa \/
 }
 
