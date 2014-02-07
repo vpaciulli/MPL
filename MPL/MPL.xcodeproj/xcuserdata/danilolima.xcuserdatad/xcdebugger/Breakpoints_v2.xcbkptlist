@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPL/DMVViewController.m"
-            timestampString = "413397289.400309"
+            timestampString = "413485869.635253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-didReceiveMemoryWarning"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
