@@ -10,8 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface DMVTableVController : UIViewController <UITextFieldDelegate>{
-    
+@interface DMVTableVController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+     NSArray *tableData;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *uiTbView;

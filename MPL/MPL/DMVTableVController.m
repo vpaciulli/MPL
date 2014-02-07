@@ -15,49 +15,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    // Initialize table data
+    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+        
     
 //  Inicia Toque longo.
 //    Traz mapa \/
 }
-
--(void) longPressGestureHandle:(UILongPressGestureRecognizer*)sender{
-    if(sender.state==UIGestureRecognizerStateEnded){
-        
-    }
-}
-
--(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+    return [tableData count];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
-//    [super didReceiveMemoryWarning];
+    [super didReceiveMemoryWarning];
     
 }
-
-//- (IBAction)btmSaida:(id)sender {
-//    [self findLocation:_tfSaida];
-//}
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    return true;
-}
-
-
--(NSString*)data{
-    
-    NSDate * now = [NSDate date];
-    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"dd/MM/yy"];
-    NSString *newDateString = [outputFormatter stringFromDate:now];
-    
-    return newDateString;
-    
-}
-
 
 @end
