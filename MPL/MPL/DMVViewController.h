@@ -27,19 +27,17 @@
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
 
-- (IBAction)buscar:(id)sender;
-
 @property (nonatomic,retain) MKPolyline *routeline; //
 @property (nonatomic,retain) MKPolylineView *routeLineView; //
 @property (weak, nonatomic) IBOutlet UITextField *textField; //
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segcontrol; //
 @property (weak, nonatomic) IBOutlet UIButton *desenhaRota; //
 @property (nonatomic,strong) NSMutableArray *ListadePontos; //
 
+- (IBAction)buscar:(id)sender;
+
 - (IBAction)updateLocation:(id)sender;
 
-
 - (IBAction)mapType:(id)sender;
+
 -(NSString*)data;
--(void)findLocation:(UITextField *)textField;
 @end
