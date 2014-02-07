@@ -181,7 +181,7 @@
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
     srand(time (NULL));
     int  num = rand() % ListadePontos.count;
-    MKPlacemark * place = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate addressDictionary:nil];
+    //MKPlacemark * place = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate addressDictionary:nil];
     MKPlacemark * place1 = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:num]).coordinate addressDictionary:nil];
     // NSLog(@"%@",((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate);
     //place.coordinate = ((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate;
