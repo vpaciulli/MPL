@@ -75,6 +75,8 @@
     
 }
 
+
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     [self realizabusca];
@@ -178,6 +180,20 @@
         return;
     }
     
+    
+    
+    MKMapRect zoomRect = MKMapRectNull;
+    for (id <MKAnnotation> annotation in worldmap.annotations){
+        
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint .y, 0.5, 0.5);
+        zoomRect = MKMapRectUnion(zoomRect, pointRect);
+    }
+    
+    [worldmap setVisibleMapRect:zoomRect animated:YES];
+    
+    
+    
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
     srand(time (NULL));
     int  num = rand() % ListadePontos.count;
@@ -248,16 +264,5 @@
     }
     else return nil;
 }
-
-//- (void)centerMapAroundSourceAndDestination
-//{
-//    MKMapRect rect = MKMapRectNull;
-//    MKMapPoint sourcePoint = MKMapPointForCoordinate(southWestPoint);
-//    rect = MKMapRectUnion(rect, MKMapRectMake(sourcePoint.x, sourcePoint.y, 0, 0));
-//    MKMapPoint destinationPoint = MKMapPointForCoordinate(_northEastPoint);
-//    rect= MKMapRectUnion(rect, MKMapRectMake(destinationPoint.x, destinationPoint.y, 0, 0));
-//    MKCoordinateRegion region = MKCoordinateRegionForMapRect(rect);
-//    [worldmap setRegion:region animated:YES];
-//}
 
 @end

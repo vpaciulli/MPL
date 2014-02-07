@@ -33,8 +33,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *desenhaRota; //
 @property (nonatomic,strong) NSMutableArray *ListadePontos; //
 
-- (IBAction)buscar:(id)sender;
-
 - (IBAction)updateLocation:(id)sender;
 
 - (IBAction)mapType:(id)sender;
