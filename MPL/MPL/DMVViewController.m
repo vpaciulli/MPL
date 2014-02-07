@@ -169,8 +169,8 @@
         
     }
     if (textField.text.length == 0) {
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Erro"
-                                                             message:@"Voçe não pode deixar a caixa de texto vazia"
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Atenção"
+                                                             message:@"Não foi possível traçar a rota."
                                                             delegate:nil
                                                    cancelButtonTitle:@"OK"
                                                    otherButtonTitles:nil];
@@ -181,7 +181,7 @@
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
     srand(time (NULL));
     int  num = rand() % ListadePontos.count;
-    MKPlacemark * place = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate addressDictionary:nil];
+    //MKPlacemark * place = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate addressDictionary:nil];
     MKPlacemark * place1 = [[MKPlacemark alloc] initWithCoordinate:((MKPointAnnotation *)[ListadePontos objectAtIndex:num]).coordinate addressDictionary:nil];
     // NSLog(@"%@",((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate);
     //place.coordinate = ((MKPointAnnotation *)[ListadePontos objectAtIndex:0]).coordinate;
@@ -196,12 +196,13 @@
      ^(MKDirectionsResponse *response, NSError *error) {
          if (error) {
              NSLog(@"ERRO MENOR");
-         } else {
-             [self showRoute:response];
+         }else{
+            [self showRoute:response];
          }
      }];
 }
 
+//commit
 
 - (void)showRoute:(MKDirectionsResponse *)response
 {
@@ -248,9 +249,15 @@
     else return nil;
 }
 
-
-- (IBAction)buscar:(id)sender {
-    [self realizabusca];
-}
+//- (void)centerMapAroundSourceAndDestination
+//{
+//    MKMapRect rect = MKMapRectNull;
+//    MKMapPoint sourcePoint = MKMapPointForCoordinate(southWestPoint);
+//    rect = MKMapRectUnion(rect, MKMapRectMake(sourcePoint.x, sourcePoint.y, 0, 0));
+//    MKMapPoint destinationPoint = MKMapPointForCoordinate(_northEastPoint);
+//    rect= MKMapRectUnion(rect, MKMapRectMake(destinationPoint.x, destinationPoint.y, 0, 0));
+//    MKCoordinateRegion region = MKCoordinateRegionForMapRect(rect);
+//    [worldmap setRegion:region animated:YES];
+//}
 
 @end

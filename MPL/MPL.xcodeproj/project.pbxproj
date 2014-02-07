@@ -25,6 +25,11 @@
 		8F9F962318A2B9BA0015EA00 /* MPLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9F962218A2B9BA0015EA00 /* MPLTests.m */; };
 		8F9F962D18A2C00B0015EA00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F962C18A2C00B0015EA00 /* CoreLocation.framework */; };
 		8F9F962F18A2C0120015EA00 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9F962E18A2C0120015EA00 /* MapKit.framework */; };
+		8FE738D018A55E8B00CA7045 /* maps5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE738CF18A55E2800CA7045 /* maps5.png */; };
+		8FE738D118A55E8F00CA7045 /* maps4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE738CE18A55DEF00CA7045 /* maps4.png */; };
+		8FE738D218A55E9200CA7045 /* maps3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE738CD18A55D8F00CA7045 /* maps3.png */; };
+		8FE738D518A5601800CA7045 /* launchImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE738D418A5601200CA7045 /* launchImage3.png */; };
+		8FE738D618A5601B00CA7045 /* launchImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE738D318A5600000CA7045 /* launchImage2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		8F9F962218A2B9BA0015EA00 /* MPLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPLTests.m; sourceTree = "<group>"; };
 		8F9F962C18A2C00B0015EA00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8F9F962E18A2C0120015EA00 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8FE738CD18A55D8F00CA7045 /* maps3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps3.png; sourceTree = "<group>"; };
+		8FE738CE18A55DEF00CA7045 /* maps4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps4.png; sourceTree = "<group>"; };
+		8FE738CF18A55E2800CA7045 /* maps5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps5.png; sourceTree = "<group>"; };
+		8FE738D318A5600000CA7045 /* launchImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage2.png; sourceTree = "<group>"; };
+		8FE738D418A5601200CA7045 /* launchImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,11 @@
 		8F9F95EB18A2B9BA0015EA00 = {
 			isa = PBXGroup;
 			children = (
+				8FE738D418A5601200CA7045 /* launchImage3.png */,
+				8FE738D318A5600000CA7045 /* launchImage2.png */,
+				8FE738CF18A55E2800CA7045 /* maps5.png */,
+				8FE738CE18A55DEF00CA7045 /* maps4.png */,
+				8FE738CD18A55D8F00CA7045 /* maps3.png */,
 				8F9F95FD18A2B9BA0015EA00 /* MPL */,
 				8F9F961C18A2B9BA0015EA00 /* MPLTests */,
 				8F9F95F618A2B9BA0015EA00 /* Frameworks */,
@@ -245,10 +260,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE738D618A5601B00CA7045 /* launchImage2.png in Resources */,
 				8F9F961018A2B9BA0015EA00 /* Images.xcassets in Resources */,
 				8F9F960218A2B9BA0015EA00 /* InfoPlist.strings in Resources */,
 				8F9F960B18A2B9BA0015EA00 /* Main.storyboard in Resources */,
+				8FE738D118A55E8F00CA7045 /* maps4.png in Resources */,
+				8FE738D518A5601800CA7045 /* launchImage3.png in Resources */,
+				8FE738D018A55E8B00CA7045 /* maps5.png in Resources */,
 				11208D9718A2C0DE008E8721 /* tarefas.txt in Resources */,
+				8FE738D218A55E9200CA7045 /* maps3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +415,6 @@
 		8F9F962718A2B9BA0015EA00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MPL/MPL-Prefix.pch";
 				INFOPLIST_FILE = "MPL/MPL-Info.plist";
@@ -408,8 +426,6 @@
 		8F9F962818A2B9BA0015EA00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MPL/MPL-Prefix.pch";
 				INFOPLIST_FILE = "MPL/MPL-Info.plist";
