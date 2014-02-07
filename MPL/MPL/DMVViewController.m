@@ -169,6 +169,16 @@
     if (ListadePontos.count != 0) {
         
     }
+    if (textField.text.length == 0) {
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Erro"
+                                                             message:@"Voçe não pode deixar a caixa de texto vazia"
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+        [errorAlert show];
+        return;
+    }
+    
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
     srand(time (NULL));
     int  num = rand() % ListadePontos.count;
