@@ -29,6 +29,7 @@
 //  Inicia Toque longo.
 
     
+    
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
     lpgr.minimumPressDuration = 1; //user must press for 2 seconds
     [worldmap addGestureRecognizer:lpgr];
@@ -218,8 +219,8 @@
     falau = [[AVSpeechUtterance alloc] init];
     falau = [AVSpeechUtterance speechUtteranceWithString:text];
     [falau setRate:0.1f];
-    //[falau setVoice:<#(AVSpeechSynthesisVoice *)#>]
-    //falau.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"pt-PT"];
+//    [falau setVoice:<#(AVSpeechSynthesisVoice *)#>]
+//    falau.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"pt-PT"];
     [fala speakUtterance:falau];
 }
 
@@ -238,5 +239,15 @@
     else return nil;
 }
 
+//- (void)centerMapAroundSourceAndDestination
+//{
+//    MKMapRect rect = MKMapRectNull;
+//    MKMapPoint sourcePoint = MKMapPointForCoordinate(southWestPoint);
+//    rect = MKMapRectUnion(rect, MKMapRectMake(sourcePoint.x, sourcePoint.y, 0, 0));
+//    MKMapPoint destinationPoint = MKMapPointForCoordinate(_northEastPoint);
+//    rect= MKMapRectUnion(rect, MKMapRectMake(destinationPoint.x, destinationPoint.y, 0, 0));
+//    MKCoordinateRegion region = MKCoordinateRegionForMapRect(rect);
+//    [worldmap setRegion:region animated:YES];
+//}
 
 @end
