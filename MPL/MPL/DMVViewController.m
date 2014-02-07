@@ -38,8 +38,8 @@
         
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
         [annotation setTitle:@"Teste"];
-        [annotation setCoordinate:CLLocationCoordinate2DMake(250, 250)];
         [self.worldmap addAnnotation:annotation];
+        [annotation setCoordinate:CLLocationCoordinate2DMake(250, 250)];
         
     }
 }
@@ -56,15 +56,19 @@
     [indicator stopAnimating];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     
+}
+
+- (IBAction)btmSaida:(id)sender {
+    [self findLocation:_tfSaida];
+}
+
+- (IBAction)btmChegada:(id)sender {
+    [self findLocation:_tfChegada];
 }
 
 - (IBAction)updateLocation:(id)sender {
