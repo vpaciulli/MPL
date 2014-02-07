@@ -249,15 +249,9 @@
     else return nil;
 }
 
-//- (void)centerMapAroundSourceAndDestination
-//{
-//    MKMapRect rect = MKMapRectNull;
-//    MKMapPoint sourcePoint = MKMapPointForCoordinate(southWestPoint);
-//    rect = MKMapRectUnion(rect, MKMapRectMake(sourcePoint.x, sourcePoint.y, 0, 0));
-//    MKMapPoint destinationPoint = MKMapPointForCoordinate(_northEastPoint);
-//    rect= MKMapRectUnion(rect, MKMapRectMake(destinationPoint.x, destinationPoint.y, 0, 0));
-//    MKCoordinateRegion region = MKCoordinateRegionForMapRect(rect);
-//    [worldmap setRegion:region animated:YES];
-//}
+
+- (IBAction)buscar:(id)sender {
+    [self realizabusca];
+}
 
 @end

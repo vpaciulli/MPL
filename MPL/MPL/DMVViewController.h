@@ -27,6 +27,7 @@
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 @property (weak, nonatomic) IBOutlet MKMapView *worldmap;
 
+- (IBAction)buscar:(id)sender;
 
 @property (nonatomic,retain) MKPolyline *routeline; //
 @property (nonatomic,retain) MKPolylineView *routeLineView; //
