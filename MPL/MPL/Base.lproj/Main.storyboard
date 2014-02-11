@@ -113,8 +113,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S5x-o8-qEt">
-                                <rect key="frame" x="0.0" y="46" width="320" height="373"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S5x-o8-qEt">
+                                <rect key="frame" x="0.0" y="20" width="320" height="498"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -124,6 +124,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S5x-o8-qEt" firstAttribute="top" secondItem="0uf-lt-AJE" secondAttribute="bottom" id="4sS-KU-0F4"/>
+                            <constraint firstItem="n3K-HG-qHS" firstAttribute="top" secondItem="S5x-o8-qEt" secondAttribute="bottom" constant="1" id="OX0-Qg-EpJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" id="bS3-QB-0of"/>
                     <connections>
